@@ -15,6 +15,7 @@ kotlin = "2.4.10"
 kotlin-wrappers = "2026.7.2"
 kotlinx-coroutines = "1.11.0"
 material3 = "1.11.0-alpha07"
+navigationCompose = "2.8.0-alpha10"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -36,6 +37,8 @@ compose-components-resources = { module = "org.jetbrains.compose.components:comp
 compose-uiToolingPreview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "composeMultiplatform" }
 kotlinx-coroutinesSwing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "kotlinx-coroutines" }
 wrappers-browser = { module = "org.jetbrains.kotlin-wrappers:kotlin-browser", version.ref = "kotlin-wrappers" }
+androidx-navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+compose-material-icons = { module = "org.jetbrains.compose.material:material-icons-extended", version = "1.7.3" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
