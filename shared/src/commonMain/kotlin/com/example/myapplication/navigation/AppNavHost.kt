@@ -7,7 +7,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.myapplication.screens.HomeScreen
 import com.example.myapplication.screens.NotificationScreen
-import com.example.myapplication.screens.ProfileScreen
+import com.example.myapplication.screens.profile.ProfileScreen
 import com.example.myapplication.screens.SearchScreen
 
 @Composable

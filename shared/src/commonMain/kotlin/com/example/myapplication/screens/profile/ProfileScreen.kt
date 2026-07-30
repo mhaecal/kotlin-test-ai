@@ -1,4 +1,4 @@
-package com.example.myapplication.screens
+package com.example.myapplication.screens.profile
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Settings
@@ -23,17 +22,15 @@ import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.NavigationDrawerItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
+import com.example.myapplication.screens.profile.components.ProfileTopBar
 import kotlinx.coroutines.launch
 
 data class DrawerItem(
@@ -93,33 +90,9 @@ fun ProfileScreen() {
     ) {
         Scaffold(
             topBar = {
-                TopAppBar(
-                    title = {
-                        Box(
-                            modifier = Modifier.fillMaxWidth(),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Text("test")
-                        }
-                    },
-                    navigationIcon = {},
-                    actions = {
-                        IconButton(
-                            onClick = { scope.launch { drawerState.open() } }
-                        ) {
-                            Icon(
-                                Icons.Default.Menu,
-                                contentDescription = null
-                            )
-                        }
-                    },
-                    windowInsets = WindowInsets(0),
-                    colors = TopAppBarDefaults.topAppBarColors(
-                        containerColor = Color.LightGray,
-                        titleContentColor = Color.Black,
-                        actionIconContentColor = Color.Black
-                    )
-                )
+                ProfileTopBar(onMenuClick = {
+                    scope.launch { drawerState.open() }
+                })
             }) { padding ->
             Box(
                 modifier = Modifier.fillMaxSize().padding(padding),
