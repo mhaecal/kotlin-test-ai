@@ -30,8 +30,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
+import com.example.myapplication.screens.profile.components.ProfileImage
 import com.example.myapplication.screens.profile.components.ProfileTopBar
 import kotlinx.coroutines.launch
+import myapplication.shared.generated.resources.Res
+import myapplication.shared.generated.resources.profile_image
+import org.jetbrains.compose.resources.painterResource
+
 
 data class DrawerItem(
     val title: String, val icon: ImageVector
@@ -93,6 +98,10 @@ fun ProfileScreen() {
                 ProfileTopBar(onMenuClick = {
                     scope.launch { drawerState.open() }
                 })
+                ProfileImage(
+                    imagePainter = painterResource(Res.drawable.profile_image),
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 76.dp)
+                )
             }) { padding ->
             Box(
                 modifier = Modifier.fillMaxSize().padding(padding),
