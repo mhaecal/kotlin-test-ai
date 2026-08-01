@@ -1,6 +1,6 @@
 package com.example.myapplication.screens.profile
 
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
@@ -98,16 +98,15 @@ fun ProfileScreen() {
                 ProfileTopBar(onMenuClick = {
                     scope.launch { drawerState.open() }
                 })
+            }) { padding ->
+            Column(
+                modifier = Modifier.fillMaxSize().padding(padding).padding(16.dp),
+            ) {
                 ProfileImage(
                     imagePainter = painterResource(Res.drawable.profile_image),
-                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 76.dp)
+                    modifier = Modifier.padding(bottom = 8.dp)
                 )
-            }) { padding ->
-            Box(
-                modifier = Modifier.fillMaxSize().padding(padding),
-                contentAlignment = Alignment.Center
-            ) {
-                Text("Profile")
+                Text("John Doe", style = MaterialTheme.typography.titleSmall)
             }
         }
     }
