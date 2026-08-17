@@ -1,10 +1,10 @@
 package com.example.myapplication.navigation
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Notifications
-import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.outlined.AccessTime
+import androidx.compose.material.icons.outlined.AccountCircle
+import androidx.compose.material.icons.outlined.Call
+import androidx.compose.material.icons.outlined.StarOutline
 import androidx.compose.ui.graphics.vector.ImageVector
 
 sealed class Screen(
@@ -12,12 +12,12 @@ sealed class Screen(
     val title: String,
     val icon: ImageVector
 ) {
-    data object Home : Screen("home", "Home", Icons.Default.Home)
-    data object Search : Screen("search", "Search", Icons.Default.Search)
-    data object Notifications : Screen("notifications", "Notifications", Icons.Default.Notifications)
-    data object Profile : Screen("profile", "Profile", Icons.Default.Person)
+    data object Favorite : Screen("favorite", "Favorites", Icons.Outlined.StarOutline)
+    data object Recent : Screen("recent", "Recent", Icons.Outlined.AccessTime)
+    data object Contact : Screen("contact", "Contact", Icons.Outlined.AccountCircle)
+    data object Call : Screen("call", "Call", Icons.Outlined.Call)
 
     companion object {
-        val bottomBarItems = listOf(Home, Search, Notifications, Profile)
+        val bottomBarItems = listOf(Favorite, Recent, Contact, Call)
     }
 }

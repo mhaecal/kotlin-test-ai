@@ -5,10 +5,10 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.myapplication.screens.HomeScreen
-import com.example.myapplication.screens.NotificationScreen
-import com.example.myapplication.screens.profile.ProfileScreen
-import com.example.myapplication.screens.SearchScreen
+import com.example.myapplication.screens.CallScreen
+import com.example.myapplication.screens.ContactScreen
+import com.example.myapplication.screens.FavoriteScreen
+import com.example.myapplication.screens.RecentScreen
 
 @Composable
 fun AppNavHost(
@@ -17,12 +17,12 @@ fun AppNavHost(
 ) {
     NavHost(
         navController = navController,
-        startDestination = Screen.Home.route,
+        startDestination = Screen.Contact.route,
         modifier = modifier
     ) {
-        composable(Screen.Home.route) { HomeScreen() }
-        composable(Screen.Search.route) { SearchScreen() }
-        composable(Screen.Notifications.route) { NotificationScreen() }
-        composable(Screen.Profile.route) { ProfileScreen() }
+        composable(Screen.Favorite.route) { FavoriteScreen() }
+        composable(Screen.Recent.route) { RecentScreen() }
+        composable(Screen.Contact.route) { ContactScreen() }
+        composable(Screen.Call.route) { CallScreen() }
     }
 }
