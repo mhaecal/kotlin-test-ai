@@ -31,8 +31,8 @@ fun AppNavigationBar(
                 },
                 label = { Text(text = screen.title) },
                 colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = Color(0xFF134ede),
-                    selectedTextColor = Color(0xFF134ede),
+                    selectedIconColor = Color(0xFF2563EB),
+                    selectedTextColor = Color(0xFF2563EB),
                     unselectedIconColor = Color.Gray,
                     unselectedTextColor = Color.Gray,
                     indicatorColor = Color.Transparent

@@ -6,9 +6,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.myapplication.screens.CallScreen
-import com.example.myapplication.screens.ContactScreen
 import com.example.myapplication.screens.FavoriteScreen
 import com.example.myapplication.screens.RecentScreen
+import com.example.myapplication.screens.contact.ContactScreen
 
 @Composable
 fun AppNavHost(
